@@ -24,9 +24,9 @@ class RandomUserController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchUsers()
         view.backgroundColor = .systemBackground
         navigationItem.title = "Random Users"
+        fetchUsers()
         setCollectionViewDelegates()
         randomUserView.collectionView.register(RandomUserCell.self, forCellWithReuseIdentifier: "randomUserCell")
     }
@@ -41,7 +41,7 @@ class RandomUserController: UIViewController {
             switch result {
             case .failure(let appError):
                 print("There was an error fetching the users: \(appError)")
-                break
+                return
             case .success(let users):
                 DispatchQueue.main.async {
                     self?.randomUsers = users
@@ -86,5 +86,12 @@ extension RandomUserController: UICollectionViewDelegateFlowLayout, UICollection
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 15
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let user = randomUsers[indexPath.row]
+        let userDetail = DetailController()
+        userDetail.user = user
+        navigationController?.pushViewController(userDetail, animated: true)
     }
 }

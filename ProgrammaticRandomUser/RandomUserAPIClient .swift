@@ -11,7 +11,6 @@ import NetworkHelper
 
 struct RandomUserAPIClient {
     
-    
     static func fetchUsers(completion: @escaping (Result<[RandomUser], AppError>) -> ()) {
         let endpoint = "https://randomuser.me/api/?results=20"
         
@@ -26,6 +25,7 @@ struct RandomUserAPIClient {
             switch result {
             case .failure(let appError):
                 completion(.failure(.networkClientError(appError)))
+                return
             case .success(let data):
                 do {
                     let searchResults = try JSONDecoder().decode(ResultsWrapper.self, from: data)

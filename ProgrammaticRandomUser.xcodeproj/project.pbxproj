@@ -18,6 +18,7 @@
 		4007938229B81C39007E495D /* RandomUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 4007938129B81C39007E495D /* RandomUser.json */; };
 		4007938529B81CF1007E495D /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4007938429B81CF1007E495D /* ImageKit */; };
 		4007938729B81DCC007E495D /* RandomUserAPIClient .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4007938629B81DCC007E495D /* RandomUserAPIClient .swift */; };
+		4007938929B8251B007E495D /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4007938829B8251B007E495D /* DetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		4007937F29B80E58007E495D /* RandomUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUser.swift; sourceTree = "<group>"; };
 		4007938129B81C39007E495D /* RandomUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RandomUser.json; sourceTree = "<group>"; };
 		4007938629B81DCC007E495D /* RandomUserAPIClient .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RandomUserAPIClient .swift"; sourceTree = "<group>"; };
+		4007938829B8251B007E495D /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				4007938629B81DCC007E495D /* RandomUserAPIClient .swift */,
 				4007936929B80047007E495D /* SceneDelegate.swift */,
 				4007936B29B80047007E495D /* RandomUserController.swift */,
+				4007938829B8251B007E495D /* DetailController.swift */,
 				4007937D29B80D68007E495D /* RandomUserCell.swift */,
 				4007937F29B80E58007E495D /* RandomUser.swift */,
 				4007937B29B80599007E495D /* RandomUserView.swift */,
@@ -158,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4007938929B8251B007E495D /* DetailController.swift in Sources */,
 				4007936C29B80047007E495D /* RandomUserController.swift in Sources */,
 				4007936829B80047007E495D /* AppDelegate.swift in Sources */,
 				4007937C29B80599007E495D /* RandomUserView.swift in Sources */,

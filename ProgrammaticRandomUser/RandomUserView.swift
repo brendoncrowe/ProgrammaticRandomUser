@@ -11,10 +11,9 @@ class RandomUserView: UIView {
     
     public lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: 120, height: 120)
+        layout.scrollDirection = .vertical // necessary aspect of cv, the flow direction
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        cv.backgroundColor = .systemTeal
+        cv.backgroundColor = .systemGray4
         return cv
     }()
 

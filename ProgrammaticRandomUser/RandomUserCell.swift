@@ -12,7 +12,7 @@ class RandomUserCell: UICollectionViewCell {
     
     // user image
     private let userImageView: UIImageView = {
-        let imageView = UIImageView(frame: .zero)
+        let imageView = UIImageView(frame: .zero) // Making the x,y width and height 0. Layout will be setup later
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 16
         imageView.image = UIImage(systemName: "person.fill")
@@ -26,12 +26,12 @@ class RandomUserCell: UICollectionViewCell {
         label.textAlignment = .center
         label.textColor = .black
         label.numberOfLines = 0
-        label.font = .systemFont(ofSize: 20, weight: .light)
+        label.font = .systemFont(ofSize: 18, weight: .light)
         label.text = "Name"
         return label
     }()
     
-    override init(frame: CGRect) {
+    override init(frame: CGRect) { // this is called via code
         super .init(frame: .zero)
         setupViews()
         setupLayoutConstraints()
@@ -64,9 +64,10 @@ class RandomUserCell: UICollectionViewCell {
         ])
     }
     
-    required init?(coder: NSCoder) {
+    required init?(coder: NSCoder) { // this is called via storyboard
         super.init(coder: coder)
-        fatalError("init(coder:) has not been implemented")
+        setupViews()
+        setupLayoutConstraints()
     }
     
     
